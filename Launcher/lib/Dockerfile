@@ -9,7 +9,7 @@ webp && \
 apt-get upgrade -y && \
 rm -rf /var/lib/apt/lists/*
 
-WORKDIR /root/ajmal
+WORKDIR /root/jackz
 
 ENV TZ=Asia/Kolkata
 
