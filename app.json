@@ -1,0 +1,90 @@
+{
+  "name": "Anjali-MD",
+  "description": "whatsapp md bot build with nodejs",
+  "repository": "https://github.com/Jackz-ser/Anjali-MD",
+  "logo": "null",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
+  "stack": "container",
+  "addons": [{
+  "plan": "heroku-postgresql"
+    }],
+    "env": {
+      "HEROKU_APP_NAME": {
+        "description": "Heroku app name, same as above entered",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "Heroku account api key, https://dashboard.heroku.com/account",
+        "required": true
+      },
+		"SESSION_ID": {
+			"description": "Add your session id here which you got after scanning the QR",
+			"required": false,
+			"value": ""
+		},
+               "ALIVE_MESSAGE": {
+			"description": "Add a message here which you want to see when typing .alive",
+			"required": true,
+			"value": "iam alive"
+		},
+		"OWNER_NAME": {
+			"description": "Add the owner name here and if you want to use the default name then just leave it)",
+			"required": false,
+			"value": "JACKZ"
+		},
+		"OWNER_NUMBER": {
+			"description": "Add the owner number here",
+			"required": true,
+			"value": ""
+		},
+		"Caption": {
+			"description": "Caption for media's send by the bot",
+			"required": false,
+			"value": "MADE BY ANJALI"
+		},
+		"BOT_NAME": {
+			"description": "Change the bot name here",
+			"required": true,
+			"value": "Anjali MD"
+		},
+		"WATERMARK": {
+			"description": "Add your watermark here",
+			"required": true,
+			"value": "Made by JACKZ SER"
+		},
+		"STICKER_PACK_NAME": {
+			"description": "Add sticker pack name here",
+			"required": true,
+			"value": "ANJALI MD"
+		},
+		"STICKER_AUTHOR_NAME": {
+			"description": "Add sticker pack author name here",
+			"required": true,
+			"value": "JACKZ SER 😌❤️"
+		},
+		"REACT_EMOJI": {
+			"description": "Add any emoji here.",
+			"required": true,
+			"value": ""
+		},
+                "LOGO": {
+			"description": "Add a image link here for the logo of your bot",
+			"required": true,
+			"value": ""
+		},
+               "VIDEOURL": {
+			"description": "Add a video url for gif menu and video menu",
+			"required": true,
+                        "value": ""
+				
+		}
+	},
+	"buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+		 {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+    ]
+}
