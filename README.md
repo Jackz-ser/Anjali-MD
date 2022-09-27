@@ -1,5 +1,2 @@
 
-
-[scan](https://anjaliqr.herokuapp.com/)
-
-[Deploy](https://dashboard.heroku.com/new?template=https://github.com/Jackz-ser/Anjali-MD)
+WANNA DEPLOY MY BOT [CLICK HERE](https://jackz-github-io.vercel.app) AND ENJOY
