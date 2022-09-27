@@ -2,7 +2,7 @@
   "name": "Anjali-MD",
   "description": "whatsapp md bot build with nodejs",
   "repository": "https://github.com/Jackz-ser/Anjali-MD",
-  "logo": "null",
+  "logo": "https://i.imgur.com/Tt8J9V4.jpeg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "stack": "container",
   "addons": [{
