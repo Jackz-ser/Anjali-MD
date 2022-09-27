@@ -1,3 +1,8 @@
+<p align="center">
+<img src= './Library/wizard.jpg' alt="PROJECT 01" height= "240" width="250"/>
+
+
+</p>
 
 `WORK IN PROGRESS
 MORE FEATURES AND CUSTOMISATIONS COMING SOON`
