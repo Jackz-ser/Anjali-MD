@@ -5008,16 +5008,7 @@ if (!text) throw '*Enter a Link Query!*'
 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) throw '*The link you provided is not valid*'
     
 anu = await fetchJson(`https://zenzapis.xyz/downloader/youtube?apikey=25a71023e0&url=${text}`) 
-let caption = `*Youtube Shorts Downloader*\n\n`
-        let i = fetch.result
-        caption += `⭔ Title : ${text}\n`
-        caption += `⭔ Size : ${i.size}\n`
-        caption += `⭔ Views : ${i.views}\n`
-        caption += `⭔ Likes : ${i.likes}\n`
-        caption += `⭔ Dislike : ${i.dislike}\n`
-        caption += `⭔ Channel : ${i.channel}\n`
-        caption += `⭔ UploadDate : ${i.uploadDate}\n\n`
-        caption += `⭔ Desc : ${i.desc}\n`
+let caption = `*Youtube Downloader*\n`
         let buttons = [
             {buttonId: `dl audio ${i.getVideo}`, buttonText: { displayText: 'Get Audio'}, type: 1 },
             {buttonId: `dl ${i.getVideo}`, buttonText: { displayText: 'Get Video'}, type: 1 }
