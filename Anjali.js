@@ -5030,14 +5030,8 @@ let caption = `*Youtube Shorts Downloader*\n\n`
             headerType: 4
         }
         Anjali.sendMessage(m.from, buttonMessage, { quoted: m })
-	
-break
-case 'cuttly': {
-  //if 
-if (!text) throw `Example : ${prefix + command} https://github.com`
-anu = await fetchJson(`https://xteam.xyz/shorturl/cuttly?url=${text}&nama=alyabot&APIKEY=${setting.riy}`)
-m.reply(`${anu.result}`)
 }
+	
 break
 case 'speedtest': {
   reply('Testing Speed...')
