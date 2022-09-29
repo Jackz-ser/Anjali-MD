@@ -3968,7 +3968,7 @@ return('Error!')
 })  
 break
 case 'update':
-if (!isCreator) throw global.owner
+if (!isCreator) throw "*OWNER COMMAND*"
   await git.fetch();
   var commits = await git.log(['main' + '..origin/' + 'main']);
   if (commits.total === 0) return reply("You have already installed the latest version ")
@@ -3994,7 +3994,7 @@ if (!isCreator) throw global.owner
    
 break
 case 'updatenow':
-if (!isCreator) throw global.owner
+if (!isCreator) throw "*OWNER COMMAND*"
     const heroku = new Heroku({ token: process.env.HEROKU_API_KEY })
   await git.fetch();
       var commits = await git.log(['main' + '..origin/' + 'main'])
