@@ -4412,7 +4412,7 @@ if (media.filesize >= 100000) return m.reply('*File Over Limit* '+util.format(me
 Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `*◉TITLE :* ${media.title}\n*◉FILESIZE :* ${media.filesizeF}\n*◉URL :* ${urls[text - 1]}\n*◉EXT:* MP3\n*◉RESOLUTION :* ${args[1] || '360p'}` }, { quoted: m })
 }
 */
-case 'ytmp4': case 'video': {
+case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./Launcher/lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} https://youtu.be/W725IHjXFHY 360p`
                 let quality = args[1] ? args[1] : '360p'
@@ -5008,13 +5008,14 @@ if (!text) throw '*Enter a Link Query!*'
 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) throw '*The link you provided is not valid*'
     
 anu = await fetchJson(`https://zenzapis.xyz/downloader/youtube?apikey=25a71023e0&url=${text}`) 
+
 let caption = `*Youtube Downloader*\n`
         let buttons = [
-            {buttonId: `dl audio ${i.getVideo}`, buttonText: { displayText: 'Get Audio'}, type: 1 },
-            {buttonId: `dl ${i.getVideo}`, buttonText: { displayText: 'Get Video'}, type: 1 }
+            {buttonId: `dl audio ${anu.getVideo}`, buttonText: { displayText: 'Get Audio'}, type: 1 },
+            {buttonId: `dl ${anu.getVideo}`, buttonText: { displayText: 'Get Video'}, type: 1 }
         ]
         let buttonMessage = {
-            image: { url: i.thumb },
+            image: thumbwiz,
             caption: caption,
             footer: watermark,
             buttons: buttons,
