@@ -4707,10 +4707,10 @@ const sendm =  Anjali.sendMessage(
         }
 
 break
-case 'get': {
+case 'yt': {
 
   
-
+if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'
       if (!text) throw 'Enter a Link' 
 
   
@@ -4726,8 +4726,8 @@ case 'get': {
   for(let i of result.url) {		
 
   if(i.url.includes('mp4')){		           			    				
-
-let link = await getBuffer(i.url)
+let link = await yt.video['360p'].download()
+//let link = await getBuffer(i.url)
 
       Anjali.sendMessage(m.chat, { video: link, caption: `*quality ${i.subname}*` }, { quoted: m })                  
 
@@ -4735,7 +4735,7 @@ let link = await getBuffer(i.url)
 
     }
 
-  }).catch((err) => reply(`*Sorry Future Error*`))
+  }).catch((err) => m.reply(`*Sorry Future Error*`))
 
   }		
 break
