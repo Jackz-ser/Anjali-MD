@@ -3302,10 +3302,10 @@ break
 break
 
  break
- case 'git': case 'gitclone':
+ case 'ghstalk': case 'gitclone':
 reply(mess.wait)
  let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
- if(!args[0]) throw 'link github  EXAMPLE: https://github.com/zim-bot/zim-bot-md'
+ if(!args[0]) throw 'link github  EXAMPLE: https://github.com/Jackz-ser/Anjali-MD'
 if (!regex1.test(args[0])) throw 'link!'
    let [, user, repo] = args[0].match(regex1) || []
     repo = repo.replace(/.git$/, '')
@@ -3968,7 +3968,7 @@ return('Error!')
 })  
 break
 case 'update':
-
+if (!isCreator) throw global.owner
   await git.fetch();
   var commits = await git.log(['main' + '..origin/' + 'main']);
   if (commits.total === 0) return reply("You have already installed the latest version ")
@@ -3994,7 +3994,7 @@ case 'update':
    
 break
 case 'updatenow':
-  
+if (!isCreator) throw global.owner
     const heroku = new Heroku({ token: process.env.HEROKU_API_KEY })
   await git.fetch();
       var commits = await git.log(['main' + '..origin/' + 'main'])
