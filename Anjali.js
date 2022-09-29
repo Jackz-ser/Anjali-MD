@@ -4878,7 +4878,7 @@ let link = await getBuffer(i.url)
 
     }
 
-  }).catch((err) => reply(`*Server Busy, Try again later*`))
+  }).catch((err) => m.reply(`*Server Busy, Try again later*`))
 
   }
 break	
@@ -4907,7 +4907,7 @@ let link = await getBuffer(i.url)
 
     }
 
-  }).catch((err) => reply(`*Server Busy, Try again later*`))
+  }).catch((err) => m.reply(`*Server Busy, Try again later*`))
 
   }
 break	
@@ -5010,7 +5010,7 @@ if (!isUrl(args[0]) && !args[0].includes('youtube.com')) throw '*The link you pr
 anu = await fetchJson(`https://zenzapis.xyz/downloader/youtube?apikey=25a71023e0&url=${text}`) 
 let caption = `*Youtube Shorts Downloader*\n\n`
         let i = fetch.result
-        caption += `⭔ Title : ${i.title}\n`
+        caption += `⭔ Title : ${text}\n`
         caption += `⭔ Size : ${i.size}\n`
         caption += `⭔ Views : ${i.views}\n`
         caption += `⭔ Likes : ${i.likes}\n`
