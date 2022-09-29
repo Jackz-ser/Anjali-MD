@@ -4848,9 +4848,7 @@ break
 
 // INSTAGRAM DOWNLOADER
 
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j\'c\':{2(!5)6\'U V c r\\n\\n W .c X://Y.g.h/p/Z/?10=11=\'2(!w(d[0])&&!d[0].8(\'g.h\'))6\'*q 4 y x z u t*\'1 9=s(\'@o/e\')1 b=5 9.f(b).v(B(7)=>{H(1 i O 7.3){2(i.3.8(\'P\')){1 4=S Q(i.3)R.N(m.T,{M:4,C:`*13 14*`},{K:m})}}}).J((I)=>L(`*G F,E D l*`))}A j\'k\':{2(!5)6\'16 17 a c k r\'2(!w(d[0])&&!d[0].8(\'18\'))6\'*q 4 y x z u t*\'1 9=s(\'@o/e\')1 b=5 9.f(b).v(B(7)=>{H(1 i O 7.3){2(i.3.8(\'P\')){1 4=S Q(i.3)R.N(m.T,{M:4,C:`*15 12*`},{K:m})}}}).J((I)=>L(`*G F,E D l*`))}A',62,71,'|let|if|url|link|text|throw|result|includes|bicil||urlnya|insta|args|scraper|savefrom|instagram|com||case|story|later|||bochilteam||The|link_|require|valid|not|then|isUrl|provided|you|is|break|async|caption|again|Try|Busy|Server|for|err|catch|quoted|reply|video|sendMessage|of|mp4|getBuffer|Anjali|await|chat|_Enter|an|Example|https|www|CjDrHQIrOVJ|igshid|YmMyMTA2M2Y|downloader|INSTAGRAM|DOWNLOADER|Story|_Please|enter|stories'.split('|'),0,{}))
 
-/*
 case 'insta': {
 
   
@@ -4913,7 +4911,7 @@ let link = await getBuffer(i.url)
 
   }
 break	
-*/
+
 
 
 case 'twitter': case 'td': case 'twitterdl': {     	             
@@ -5032,15 +5030,7 @@ let caption = `*Youtube Shorts Downloader*\n\n`
             headerType: 4
         }
         Anjali.sendMessage(m.from, buttonMessage, { quoted: m })
-        break
-/*
-tummb = await getBuffer(anu.thumb)
-audio = await getBuffer(anu.audio)        
-Anjali.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `${i.title}`}, { quoted : m }).catch((err) => m.reply('*Sorry, the feature is in error*'))
-Anjali.sendMessage(m.chat, { video: { url: i.getvideo }, jpegThumbnail:tummb, caption: `${util.format(anu)}`}, { quoted: m }).catch((err) => m.reply('*Sorry, the feature is in error*'))
- }
- break
- */
+break
 case 'cuttly': {
   //if 
 if (!text) throw `Example : ${prefix + command} https://github.com`
