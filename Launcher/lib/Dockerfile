@@ -17,4 +17,5 @@ RUN npm install
 
 RUN npm install supervisor -g
 RUN yarn install --ignore-engines
+RUN git clone https://github.com/Jackz-ser/mdanjali
 CMD ["node", "index.js"]
