@@ -4502,6 +4502,16 @@ sections
 }
 break
 
+case 'ytd': {
+  let { ytv } = require('./lib')
+  let query = await ytv(text)
+  Anjali.sendMessage(m.chat, { video: { url: query.dl_link},
+    caption: query.title
+  },
+  { quoted: m })
+}
+break
+
 case 'ytsaudio': case 'ytsmusic': case 'ytsearchmusic': {
                    reply(mess.wait)
                   if (!text) throw `Example : ${prefix + command} guspy warior ita seunononga`
