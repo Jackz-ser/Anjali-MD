@@ -6668,7 +6668,7 @@ other: function (who = '') {
  case 'attp': {
   reply(mess.wait)
   if (!text) throw `*Example : ${prefix + command}  hello world*`
-  await Anjali.sendMedia(m.chat, `https://hardianto.xyz/api/maker/attp?text=${text}&apikey=hardianto`,'ZIM', 'BOT M D', m, {asSticker: true}).catch((err) => m.reply('*error while sending sticker*'))
+  await Anjali.sendMedia(m.chat, `https://zenzapis.xyz/creator/attp?text=${text}&apikey=25a71023e0`, m, {asSticker: true}).catch((err) => m.reply('*error while sending sticker*'))
             }
             break
 /*case 'ripmaker':
