@@ -6773,7 +6773,7 @@ id: 'ping'
 }, {
 quickReplyButton: {
 displayText: 'LIST',
-id: 'listmenu'
+id: 'list'
 }
 }]
 }
@@ -6789,7 +6789,7 @@ Report Message: ${text}` })
 reply(`*Successfully reported to the owner\n\nPlease make sure the bug is valid, if you play with this, use this feature again and again for no reason, you will be banned for using the bot*`)
   }
 break 
-case 'listmenu':             
+case 'list':            
   let sections = []   
   let listmenu = [`allmenu`,`animemenu`,`groupmenu`,`toolmenu`,`downloadmenu`,`searchmenu`,`photofiltermenu`,`textpromenu`,`photooxymenu`,`ownermenu`,`ephotomenu`,`convertmenu`,`databasemenu`,`rpgmenu`,`donasi`]
   let listmenuu = [`ALL MENU`,`ANIME MENU`,`GROUP MENU`,`TOOL MENU`,`DOWNLOAD MENU`,`SEARCH MENU`,`PHOTOFILTER MENU`,`TEXTPRO MENU`,`PHOTOOXY MENU`,`OWNER MENU`,`EPHOTO MENU`,`CONVERT MENU`,`DATABASE MENU`,`RPG MENU`,`DONATE`]
@@ -7473,7 +7473,7 @@ anu = `
     }, {
         quickReplyButton: {
             displayText: 'LIST',
-            id: 'listmenu'
+            id: 'list'
         }
     }]
     let setbot = global.db.settings[botNumber]
@@ -7508,7 +7508,7 @@ anu = `
     }, {
     quickReplyButton: {
     displayText: 'LIST',
-    id: 'listmenu'
+    id: 'list'
     }
     }]
     }
@@ -7546,7 +7546,7 @@ anu = `
     }, {
     quickReplyButton: {
     displayText: 'LIST',
-    id: 'listmenu'
+    id: 'list'
     }
     }]
     }
@@ -7584,7 +7584,7 @@ anu = `
     }, {
     quickReplyButton: {
     displayText: 'LIST',
-    id: 'listmenu'
+    id: 'list'
     }
     }]
     }
@@ -7638,7 +7638,7 @@ anu = `
       {
       quickReplyButton: {
       displayText: 'LIST',
-      id: 'listmenu'
+      id: 'list'
       }},]
       Anjali.sendMessage(m.chat,{
         caption: anu,
