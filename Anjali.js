@@ -2189,7 +2189,7 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
  case 'sc': case 'script': case 'donate': case 'donasi': case 'donate': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
 
   teks = `
-  *${global.botname}*\n*Whatsapp:* https://wa.me/918075641889?text=Hey%20Bro\n\n*GROUP:*https://chat.whatsapp.com/GU2uwsrhCtZFmK8rpzfpta\n\n You Can Support Us By Joing my whatsapp group😊`
+  *${global.botname}*\n*Whatsapp: *https://wa.me/918075641889?text=Hey%20Bro*\n\n*GROUP:https://chat.whatsapp.com/GU2uwsrhCtZFmK8rpzfpta*\n\n You Can Support Us By Joing my whatsapp group😊`
   let buttons = [
  {buttonId: `menu`, buttonText: {displayText: 'MENU <3'}, type: 1}
   ]
