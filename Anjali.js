@@ -4416,17 +4416,19 @@ case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./Launcher/lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} https://youtu.be/W725IHjXFHY 360p`
                 let quality = args[1] ? args[1] : '360p'
-                let media = await ytv(text, quality)
+                let ytId = ytIdRegex.exec(text)
+                let media = await ytv('https://youtu.be/' + ytId[1], quality)
                 if (media.filesize >= 999999) return reply('Video size is too big '+util.format(media))
                 Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resololution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
 case 'ytmp3': case 'getmusic': case 'ytaudio': {
-                let { yta } = require('./Launcher/lib/y2mate')
+                let { ytIdRegex, yta } = require('./Launcher/lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 320kbps`)
-                if (!isUrl(args[0]) && !args[0].includes('youtube.com')) throw '*The link you provided is not valid*'
+                if (!isUrl(args[0]) && !args[0].includes('youtu')) throw '*The link you provided is not valid*'
+                let ytId = ytIdRegex.exec(text)
                 let quality = args[1] ? args[1] : '128kbps'
-                let media = await yta(text, quality)
+                let media = await yta('https://youtu.be/' + ytId[1], '128kbps')
                 if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
                 buf = await getBuffer(media.thumb)
                 Anjali.sendMessage(m.chat, {audio:{url:media.dl_link}, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{
@@ -4499,16 +4501,6 @@ title: `HERE IS YOUR RESULTS FROM *${text}* _select song or video below_`,
 buttonText: "CLICK HERE",
 sections
 }, { quoted : m })
-}
-break
-
-case 'ytd': {
-  let { ytv } = require('./lib')
-  let query = await ytv(text)
-  Anjali.sendMessage(m.chat, { video: { url: query.dl_link},
-    caption: query.title
-  },
-  { quoted: m })
 }
 break
 
@@ -4720,7 +4712,7 @@ break
 case 'yt': {
 
   
-if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'
+if (!isUrl(args[0]) && !args[0].includes('youtu')) throw '*The link you provided is not valid*'
       if (!text) throw 'Enter a Link' 
 
   
