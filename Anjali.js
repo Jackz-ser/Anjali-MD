@@ -4413,7 +4413,7 @@ Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4
 }
 */
 case 'ytmp4': case 'ytvideo': {
-                let { ytv } = require('./Launcher/lib/y2mate')
+                let { ytIdRegex, ytv } = require('./Launcher/lib/y2mate')
                 if (!text) throw `Example : ${prefix + command} https://youtu.be/W725IHjXFHY 360p`
                 let quality = args[1] ? args[1] : '360p'
                 let ytId = ytIdRegex.exec(text)
