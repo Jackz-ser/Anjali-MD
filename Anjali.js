@@ -4098,7 +4098,7 @@ case 'ytmp4': case 'video': {
                 Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resololution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break
-case 'ytmp3': case 'song': case 'ytaudio': {
+case 'ytmp3': case 'music': case 'ytaudio': {
                 let { ytIdRegex, yta } = require('./Launcher/lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 320kbps`)
                 if (!isUrl(args[0]) && !args[0].includes('youtu')) throw '*The link you provided is not valid*'
@@ -4147,7 +4147,6 @@ break
 case 'song': case 'ytv': {
   reply(mess.wait)
   if (!text) throw `Example : ${prefix + command} story wa anime`
-  if (!isUrl(args[0]) && !args[0].includes('youtu')) throw '*The link you provided is not valid*'
   let yts = require("yt-search")
   let search = await yts(text)                   
 let sections = []   
