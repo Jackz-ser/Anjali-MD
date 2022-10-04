@@ -4095,7 +4095,7 @@ case 'ytmp4': case 'video': {
                 let ytId = ytIdRegex.exec(text)
                 let media = await ytv('https://youtu.be/' + ytId[1], quality)
                 if (media.filesize >= 999999) return reply('Video size is too big '+util.format(media))
-                Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${media.title}`, { quoted: m })
+                Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${media.title}`, { quoted: m })}
             }
             break
 case 'ytmp3': case 'music': case 'ytaudio': {
