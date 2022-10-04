@@ -4095,7 +4095,7 @@ case 'ytmp4': case 'video': {
                 let ytId = ytIdRegex.exec(text)
                 let media = await ytv('https://youtu.be/' + ytId[1], quality)
                 if (media.filesize >= 999999) return reply('Video size is too big '+util.format(media))
-                Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `⭔ Title : ${media.title}\n⭔ File Size : ${media.filesizeF}\n⭔ Url : ${isUrl(text)}\n⭔ Ext : MP3\n⭔ Resololution : ${args[1] || '360p'}` }, { quoted: m })
+                Anjali.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${media.title}`, { quoted: m })
             }
             break
 case 'ytmp3': case 'music': case 'ytaudio': {
@@ -4113,7 +4113,7 @@ case 'ytmp3': case 'music': case 'ytaudio': {
                 mediaType:2,
                 thumbnail:buf,
                 mediaUrl:`${text}`, 
-                sourceUrl: `https://youtu.be/n2bvbnfd3Fg` }}}, {quoted:m})
+                sourceUrl: `https://instagram.com/safxr._` }}}, {quoted:m})
                 }
             break
 case 'mediafire': {  
@@ -4146,7 +4146,7 @@ sourceUrl: tutorial }}}, {quoted: m})
 break
 case 'song': case 'ytv': {
   reply(mess.wait)
-  if (!text) throw `Example : ${prefix + command} story wa anime`
+  if (!text) throw `Example : ${prefix + command} Kesariya thera`
   let yts = require("yt-search")
   let search = await yts(text)                   
 let sections = []   
@@ -4171,7 +4171,7 @@ sections.push(list)
 const sendm =  Anjali.sendMessage(
 m.chat, 
 {
-text: "\n\n*_DONE SCRAPING DATA_*",
+text: "\n\n*SONG AND VIDEOS*",
 footer: botname,
 title: `HERE IS YOUR RESULTS FROM *${text}* _select song or video below_`,
 buttonText: "CLICK HERE",
