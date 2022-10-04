@@ -1099,9 +1099,10 @@ Anjali.sendMessage(from, {text:`*DETECTED*\n\n@${kice.split("@")[0]} *I said no 
 if (db.settings[botNumber].autoblock) {
 if (m.chat.endsWith("@s.whatsapp.net")) {
 if (isCreator) reply('*you are bot creator okay*')
+else {
 block = m.sender
-await Anjali.sendMessage(from, {text:`*AUTO BLOCK*\n\n@${block.split("@")[0]} *today I'm blocking dumps bye you are _blocked_* *if you want to use bot join this group* ${global.group1}\n\n${global.group2}`, m})
-Anjali.updateBlockStatus(m.sender,'block')
+await Anjali.sendMessage(from, {text:`*AUTO BLOCK ENABLED*\n\n@${block.split("@")[0]} ${global.group1}\n\n${global.group2}`, m})
+Anjali.updateBlockStatus(m.sender,'block')}
 }
 }
 
