@@ -6591,9 +6591,9 @@ case 'setmenu': {
          title: ``,
          description:
  `
- SET MENU
+ SET MENU LIST
         `,
-         buttonText: "SET MENU",
+         buttonText: "CLICK TO SET MENU",
          footerText: botname,
          listType: "SINGLE_SELECT",
          sections: [{
@@ -6676,7 +6676,7 @@ timestampe = speed();
 latensie = speed() - timestampe
 anu = `
 *ᴜᴘᴛɪᴍᴇ :* ${runtime(process.uptime())}
-
+*ᴜsᴇʀ :* ${pushname}
 
 
 
@@ -6691,6 +6691,7 @@ anu = `
  𝚎𝚙𝚑𝚘𝚝𝚘𝚖𝚎𝚗𝚞
  𝚝𝚘𝚘𝚕𝚜𝚖𝚎𝚗𝚞
  𝚌𝚘𝚗𝚟𝚎𝚛𝚝𝚖𝚎𝚗𝚞
+ 
 *_${global.caption}_*
 
 「 𝗧𝗢𝗢𝗟 𝗠𝗘𝗡𝗨 」
@@ -7117,7 +7118,7 @@ anu = `
 
  *_${global.caption}_*
  
-%readmore` 
+` 
     let btn = [{
         urlButton: {
             displayText: 'GROUP',
@@ -7354,7 +7355,7 @@ anu = `
     {
     text: `
 ┍━━━━━━━━━━━━━━━━━━━━
-│ ❐│ *ɴᴀᴍᴇ* : ${pushname}
+│ ❐│ *ᴜsᴇʀ* : ${pushname}
 │ ❐│ *ʟᴇᴠᴇʟ* : ${getLevelingLevel(sender)}
 │ ❐│ *ʀᴏʟᴇ* : ${role}
 │ ❐│ *ᴛɪᴍᴇ* : ${time}
@@ -7381,9 +7382,9 @@ anu = `
     }
       var buffer = await getBuffer(ppuser)
       let buttons = [
-        {buttonId: `sc`, buttonText: {displayText: 'SOURCE CODE'}, type: 1},
+        {buttonId: `sc`, buttonText: {displayText: 'DONATE'}, type: 1},
         {buttonId: `owner`, buttonText: {displayText: 'OWNER'}, type: 1},
-        {buttonId: `rpgmenu`, buttonText: {displayText: '©RPG MENU'}, type: 1},
+        {buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1},
         ]
         let buttonMessage = {
         document: fs.readFileSync('./Launcher/lib/tes.xlsx'),
@@ -7419,19 +7420,6 @@ Anjali.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }}
 buffer = await getBuffer(picak+'OWNER MENU')
 ram3 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
-
- 「 𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨 」
 
  chatbot on/off
  setmenu -option-
@@ -7456,7 +7444,6 @@ anu = `
  public
  self
  grouponly
-「 ${global.caption}」
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -7488,17 +7475,6 @@ Anjali.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }}
 buffer = await getBuffer(picak+'DATABASE MENU')
 ram4 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
 
 「 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗠𝗘𝗡𝗨 」
  addmsg -msg-
@@ -7539,17 +7515,6 @@ case 'photooxymenu': {
   buffer = await getBuffer(picak+'PHOTOOXY MENU')
   ram5 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu = `
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
 
 「 𝗣𝗛𝗢𝗧𝗢𝗢𝗫𝗬 𝗠𝗘𝗡𝗨 」
  silk -text-
@@ -7608,19 +7573,8 @@ Anjali.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }}
 buffer = await getBuffer(picak+'GROUP MENU')
 ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
 
-╔➽「 ◉ɢʀᴏᴜᴘᴍᴇɴᴜ◉ 」
+「  𝗚𝗥𝗢𝗨𝗣 𝗠𝗘𝗡𝗨 」
  add -admin-
  kick -admin-
  welcome on/off -admin-
@@ -7663,7 +7617,6 @@ anu = `
  demote -admin-
  promote -admin-
  editinfo -admin-
-└───「 ${global.caption}」
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -7695,19 +7648,8 @@ Anjali.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }}
 buffer = await getBuffer(picak+'TEXTPRO MENU')
 ram11 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
 
-╔➽「 ◉ᴛᴇxᴛᴘʀᴏᴍᴇɴᴜ◉ 」
+「 𝗧𝗘𝗫𝗧𝗣𝗥𝗢 𝗠𝗘𝗡𝗨 」
  candy -text-
  christmas -text-
  3dchristmas -text-
@@ -7764,7 +7706,6 @@ anu = `
  glue -text-
  1917 -text-
  leaves -text-
-└───「 ${global.caption}」
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -7796,23 +7737,12 @@ Anjali.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }}
 buffer = await getBuffer(picak+'DOWNLOAD MENU')
 ram22 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
 
-╔➽〔 *_ᴅᴏᴡɴʟᴏᴀᴅᴍᴇɴᴜ_* 〕
+〔 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗥 𝗠𝗘𝗡𝗨 〕
  ytmp3 -link-
  ytmp4 -link-
- audio  -link-
- play -query-
+ ytv  -query-
+ song -query-
  mediafire -link-
  fb -link-
  fbmp3 -link-
@@ -7827,13 +7757,12 @@ anu =`
  twitter -link-
  twittermp3-link-
  insta -link-
+ story -link-
  igimage-link-
  igtv -link-
  soundcloud -link-
  ytshorts -link-
- get -link-
  youtube -link-
-└───〔 *_${global.caption}_* 〕
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -7865,20 +7794,8 @@ Anjali.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }}
 buffer = await getBuffer(picak+'PHOTOFILTER MENU')
 ram30 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
 
-  
-╔➽「 ᴘʜᴏᴛꜰɪʟᴛᴇʀᴍᴇɴᴜ」
+「 𝗣𝗛𝗢𝗧𝗢 𝗙𝗜𝗟𝗧𝗘𝗥 𝗠𝗘𝗡𝗨 」
  angie -photo-
  aria -photo-
  attic -photo-
@@ -7917,7 +7834,6 @@ anu =`
  hdr -photo-
  viewfilter -photo-
  warmsunset -photo-
-└───「 ${global.caption}」
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -7949,20 +7865,8 @@ case 'animemenu':{
   ram40 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   buffer = await getBuffer(picak+'ANIME MENU')
   anu =`
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
-  
-    
-╔➽「 ᴀɴɪᴍᴇᴍᴇɴᴜ」
+
+「 𝗔𝗡𝗜𝗠𝗘 𝗠𝗘𝗡𝗨 」
  cry
  kill
  hug
@@ -8004,7 +7908,6 @@ case 'animemenu':{
  awoo2
  animewall2
  searchanime -query-
-└───「 ${global.caption}」
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8036,20 +7939,8 @@ case 'convertmenu': {
   ram70 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   buffer = await getBuffer(picak+'CONVERT MENU')
   anu =`
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
-  
-    
-╔➽「 ᴄᴏɴᴠᴇʀᴛᴍᴇɴᴜ」
+
+「 𝗖𝗢𝗡𝗩𝗘𝗥𝗧 𝗠𝗘𝗡𝗨 」
  toimg -quote sticker-
  togif -quote video-
  todocument -media-
@@ -8069,7 +7960,6 @@ case 'convertmenu': {
  smeme -media-
  stickermeme -media-
  swm -sticker-
-└───「 ${global.caption}」
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8101,20 +7991,8 @@ case 'toolmenu': {
   buffer = await getBuffer(picak+'TOOL MENU')
   ram90 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
-  
-    
-╔➽「 ᴛᴏᴏʟᴍᴇɴᴜ」
+
+「 𝗧𝗢𝗢𝗟 𝗠𝗘𝗡𝗨 」
  ip ->-
  ipdomain -domain name-
  codecolor -text-
@@ -8129,7 +8007,6 @@ case 'toolmenu': {
  shortlinkcuttly -url-
  shortlinkisgd -url-
  brainly -query-
-└───「 ${global.caption}」
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8161,19 +8038,9 @@ case 'searchmenu':{
   buffer = await getBuffer(picak+'SEARCH MENU')
   ram200 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-*Oi Bro*
-*📁Directory:* ${os.homedir()}
-*👑Creator:*${global.ownername}
-*💳Version:* 1.0
-*💎Prefix:* [ ${prefix} ]
-*⌚Time:* ${time}
-*🖥️ Speed:* ${latensie.toFixed(4)} Second
-*📡Free Memory:* ${os.freemem()}
-*📦Framework:* Nodejs
-*🦄Total Memory:* ${os.totalmem()}
-*🗃️Ram Usage:* ${ram2}
 
-╔➽「 ꜱᴇᴀʀᴄʜᴍᴇɴᴜ」
+「 𝗦𝗘𝗔𝗥𝗖𝗛 𝗠𝗘𝗡𝗨 」
+
  lyrics -query-
  linkwa -query-
  apk -query-
@@ -8200,7 +8067,6 @@ case 'searchmenu':{
  searchgroups -query-
  qoutesanime -query-
  gmsarena -query-
-└───「 ${global.caption}」
 
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: Anjali.waUploadToServer })
@@ -8233,6 +8099,7 @@ Anjali.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }}
 buffer = await getBuffer(picak+'EPHOTO MENU')
 ram250 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
+
 「 𝗘-𝗣𝗛𝗢𝗧𝗢 𝗠𝗘𝗡𝗨 」
 
  𝟹𝚍-𝚠𝚘𝚘𝚍
