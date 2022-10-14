@@ -1099,10 +1099,9 @@ Anjali.sendMessage(from, {text:`*DETECTED*\n\n@${kice.split("@")[0]} *I said no 
 if (db.settings[botNumber].autoblock) {
 if (m.chat.endsWith("@s.whatsapp.net")) {
 if (isCreator) reply('*you are bot creator okay*')
-else {
 block = m.sender
 await Anjali.sendMessage(from, {text:`*AUTO BLOCK ENABLED*\n\n@${block.split("@")[0]} ${global.group1}\n\n${global.group2}`, m})
-Anjali.updateBlockStatus(m.sender,'block')}
+Anjali.updateBlockStatus(m.sender,'block')
 }
 }
 
@@ -4145,7 +4144,7 @@ Anjali.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1
 sourceUrl: tutorial }}}, {quoted: m})
 }
 break
-case 'song': case 'ytv': {
+case 'seachyt': case 'ytv': {
   reply(mess.wait)
   if (!text) throw `Example : ${prefix + command} Kesariya thera`
   let yts = require("yt-search")
@@ -4175,6 +4174,41 @@ m.chat,
 text: "\n\n*SONG AND VIDEOS*",
 footer: botname,
 title: `HERE IS YOUR RESULTS FROM *${text}* _select song or video below_`,
+buttonText: "CLICK HERE",
+sections
+}, { quoted : m })
+}
+break
+case 'song': {
+  reply(mess.wait)
+  if (!text) throw `Example : ${prefix + command} Kesariya thera`
+  let yts = require("yt-search")
+  let search = await yts(text)                   
+let sections = []   
+let listmenu = [`ytmp3 ${search.all[0].url}`,`ytmp3 ${search.all[1].url}`,`ytmp3 ${search.all[2].url}`,`ytmp3 ${search.all[3].url}`,`ytmp3 ${search.all[4].url}`,`ytmp3 ${search.all[5].url}`,`ytmp3 ${search.all[6].url}`,`ytmp3 ${search.all[7].url}`,`ytmp3 ${search.all[8].url}`,`ytmp3 ${search.all[9].url}`,`ytmp3 ${search.all[10].url}`,`ytmp3 ${search.all[11].url}`,`ytmp3 ${search.all[12].url}`,`ytmp3 ${search.all[13].url}`,`ytmp3 ${search.all[14].url}`,`ytmp3 ${search.all[15].url}`,`ytmp3 ${search.all[16].url}`,`ytmp3 ${search.all[17].url}`,`ytmp3 ${search.all[18].url}`,`ytmp3 ${search.all[19].url}`]
+      let listmenuu = [`SONG MP3⬤: ${search.all[0].title}`,`SONG MP3⬤: ${search.all[1].title}`,`SONG MP3⬤: ${search.all[2].title}`,`SONG MP3⬤: ${search.all[3].title}`,`SONG MP3⬤: ${search.all[4].title}`,`SONG MP3⬤: ${search.all[5].title}`,`SONG MP3⬤: ${search.all[6].title}`,`SONG MP3⬤: ${search.all[7].title}`,`SONG MP3⬤: ${search.all[8].title}`,`SONG MP3⬤: ${search.all[9].title}`,`SONG MP3⬤: ${search.all[10].title}`,`SONG MP3⬤: ${search.all[11].title}`,`SONG MP3⬤: ${search.all[12].title}`,`SONG MP3⬤: ${search.all[13].title}`,`SONG MP3⬤: ${search.all[14].title}`,`SONG MP3⬤: ${search.all[15].title}`,`SONG MP3⬤: ${search.all[16].title}`,`SONG MP3⬤: ${search.all[17].title}`,`SONG MP3⬤: ${search.all[18].title}`,`SONG MP3⬤: ${search.all[19].title}`]
+      let listmenuuu = [`\n${search.all[0].description}`,`\n${search.all[1].description}`,`\n${search.all[2].description}`,`\n${search.all[3].description}`,`\n${search.all[4].description}`,`\n${search.all[5].description}`,`\n${search.all[6].description}`,`\n${search.all[7].description}`,`\n${search.all[8].description}`,`\n${search.all[9].description}`,`\n${search.all[10].description}`,`\n${search.all[11].description}`,`\n${search.all[12].description}`,`\n${search.all[13].description}`,`\n${search.all[14].description}`,`\n${search.all[15].description}`,`\n${search.all[16].description}`,`\n${search.all[17].description}`,`\n${search.all[18].description}`,`\n${search.all[19].description}`]
+      let nombor = 1
+      let startnum = 0
+      let startnumm = 0
+      for (let x of listmenu) {
+      const list = {title: 'RESULT NUMBER ' + nombor++,
+      rows: [
+         {
+          title: `${listmenuu[startnum++]}`,
+          description: `${listmenuuu[startnumm++]}`,
+          rowId: `${prefix}${x}`
+}, 
+]
+}
+sections.push(list)   
+}
+const sendm =  Anjali.sendMessage(
+m.chat, 
+{
+text: "\n\n*SONG DOWNLOADER*",
+footer: botname,
+title: `*HERE IS YOUR RESULTS FROM ${text}*`,
 buttonText: "CLICK HERE",
 sections
 }, { quoted : m })
